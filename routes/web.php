@@ -27,3 +27,5 @@ Route::get('/lista-usuarios', function () {
 
     return view('listaUsuarios', compact('usuarios'));
 })->name('lista-usuario');
+
+Route::view('/cadastra-usuario','cadastraUsuarios');
