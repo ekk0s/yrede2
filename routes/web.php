@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -16,7 +17,10 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $posts = Post::all();
+
+    return view('inicial', compact('post'));
 });
 
 Route::get('/teste', function () {
@@ -35,17 +39,17 @@ Route::post('/salva-usuario', function(Request $request){
     
     $usuario = new User();
     $usuario->usuario = $request->input('usuario');
-    $usuario->usuario = $request->input('nome');
-    $usuario->usuario = $request->input('bio');
-    $usuario->usuario = $request->input('email');
-    $usuario->usuario = $request->input('senha');
+    $usuario->name = $request->input('nome');
+    $usuario->bio = $request->input('bio');
+    $usuario->email = $request->input('email');
+    $usuario->password = $request->input('senha');
     $usuario->save();
 
     return "Salvo com sucesso!!!1";
 
 })->name('salva-usuario');
 
-route::view('login', 'login');
+route::view('login', 'login')->name('login');
 
 route::post('/logar', function (Request $request) {
 
@@ -54,14 +58,31 @@ route::post('/logar', function (Request $request) {
         'password' => ['required'],
     ]);
 
-    if (Auth::attempt($credentials)) {
+    if (Auth::attempt(['email'=>$credentials['email'],
+    'password' =>$credentials['password']])) {
+
         $request->session()->regenerate();
 
-        //return redirect()->intended('dashboard');
+        return redirect()->intended('/');
 
-        return "Logado com sucesso!!";
+       // return "Logado com sucesso!!";
     }
 
 return "Erro ao logar!!! Usuário ou senha inválido";
 
 });
+
+Route::middleware(['auth'])->group(function () {
+Route::view('/cria-post', 'criaPost');
+
+Route::post('/salva-post', function (Request $request) {
+    $post = new Post();
+
+    $post->user_id= Auth::id();
+    $post->mensagem = $request->mensagem;
+
+    $post->save();
+
+});
+
+}); 
