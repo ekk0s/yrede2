@@ -7,26 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Lista de usuários</title>
+    <title>CADASTRO</title>
 </head>
 <body>
-    <h1 class="w-full text-center">Cadastro de usuário </h1>
 
-    <form class="card-body max-w-md m-auto"  action="{{route('salva-usuario')}}" method="post">
+  
+    <h1 class="w-full text-center p-14 text-2xl font-black text-purple-900"> CADASTRAR USUÁRIO </h1>
+
+    <form class="card-body max-w-md m-auto "  action="{{route('salva-usuario')}}" method="post">
 
     @csrf
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold">Usuário</span>
+      <span class="label-text font-bold text-purple-900">Usuário</span>
     </label>
-    <input name="usuario" type="text" placeholder="usuario" 
+    <input name="usuario" type="text" placeholder="Usuario" 
             class="input input-bordered" required />
 </div>
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold">Bio</span>
+      <span class="label-text font-bold text-purple-900">Bio</span>
     </label>
     <input name="bio" type="text" placeholder="Bio" 
             class="input input-bordered" required />
@@ -34,7 +36,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold">Nome</span>
+      <span class="label-text font-bold text-purple-900">Nome</span>
     </label>
     <input name="nome" type="text" placeholder="Nome" 
             class="input input-bordered" required />
@@ -42,7 +44,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold">E-mail</span>
+      <span class="label-text font-bold text-purple-900">E-mail</span>
     </label>
     <input name="email" type="email" placeholder="Email" 
             class="input input-bordered" required />
@@ -50,15 +52,13 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold">Senha</span>
+      <span class="label-text font-bold text-purple-900">Senha</span>
     </label>
     <input name="senha" type="password" placeholder="Senha" 
             class="input input-bordered" required />
 </div>
 
-<button type="submit" class="btn btn-successs">Salvar</button>
-
-</form>    
+<button type="submit" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">CADASTRAR</button>   
 
 </body>
 </html>

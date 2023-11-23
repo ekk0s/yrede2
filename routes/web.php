@@ -20,7 +20,7 @@ Route::get('/', function () {
 
     $posts = Post::all();
 
-    return view('inicial', compact('post'));
+    return view('inicial', compact('posts'));
 });
 
 Route::get('/teste', function () {
@@ -83,6 +83,8 @@ Route::post('/salva-post', function (Request $request) {
 
     $post->save();
 
+    return redirect ('/');
 });
 
-}); 
+
+});
