@@ -12,7 +12,7 @@
 <body>
 
   
-    <h1 class="w-full text-center p-14 text-2xl font-black text-purple-900"> CADASTRAR USUÁRIO </h1>
+    <h1 class="w-full text-center p-14 text-2xl font-black text-gray-200"> CADASTRAR USUÁRIO </h1>
 
     <form class="card-body max-w-md m-auto "  action="{{route('salva-usuario')}}" method="post">
 
@@ -20,7 +20,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold text-purple-900">Usuário</span>
+      <span class="label-text font-bold text-gray-200">Usuário</span>
     </label>
     <input name="usuario" type="text" placeholder="Usuario" 
             class="input input-bordered" required />
@@ -28,7 +28,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold text-purple-900">Bio</span>
+      <span class="label-text font-bold text-gray-200">Bio</span>
     </label>
     <input name="bio" type="text" placeholder="Bio" 
             class="input input-bordered" required />
@@ -36,7 +36,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold text-purple-900">Nome</span>
+      <span class="label-text font-bold text-gray-200">Nome</span>
     </label>
     <input name="nome" type="text" placeholder="Nome" 
             class="input input-bordered" required />
@@ -44,7 +44,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold text-purple-900">E-mail</span>
+      <span class="label-text font-bold text-gray-200">E-mail</span>
     </label>
     <input name="email" type="email" placeholder="Email" 
             class="input input-bordered" required />
@@ -52,7 +52,7 @@
 
 <div class="form-control">
     <label class="label">
-      <span class="label-text font-bold text-purple-900">Senha</span>
+      <span class="label-text font-bold text-gray-200">Senha</span>
     </label>
     <input name="senha" type="password" placeholder="Senha" 
             class="input input-bordered" required />

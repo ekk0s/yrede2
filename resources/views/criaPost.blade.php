@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,7 @@
 <nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap ">THE ORIGINAL </span>
-        <img src="https://img1.picmix.com/output/stamp/normal/6/3/0/5/2195036_c5bd9.png" class="h-12" alt="" />
+        <img src="https://i.pinimg.com/originals/8d/37/20/8d3720db12d126c8f3169e55083d5b45.png" class="h-12 rounded" alt="" />
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -23,17 +22,15 @@
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-
-    
       <ul class="font-bold flex p-4 md:p-0 ">
         <li>
-          <a href="/cadastra-usuario" class="block py-2 px-3 text-purple-900 rounded">Criar Conta</a>
+          <a href="/cadastra-usuario" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Criar Conta</a>
         </li>
         <li>
-          <a href="/login" class="block py-2 px-3 text-purple-900 rounded">Login</a>
+          <a href="/login" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Login</a>
         </li>
         <li>
-          <a href="/" class="block py-2 px-3 text-purple-900 rounded">Voltar ao início</a>
+          <a href="/cria-post" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Nova Postagem</a>
         </li>   
       </ul>
     </div>
@@ -64,7 +61,7 @@
             Todos os direitos reservados
             </a>
             <a href="#" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-             © 2023 The Original Y Corp.
+             © 2023 Y Corp.
             </a>
         </div>    
 
