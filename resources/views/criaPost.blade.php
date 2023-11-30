@@ -1,14 +1,26 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"  rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/hd/dark-mode-3840-x-2160-background-6xrac361hd277x12.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        textarea {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
     <title>Nova Postagem</title>
 </head>
-<body class="dark:bg-gray-800 text-white">
+<body class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
 
 <nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -23,15 +35,7 @@
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-bold flex p-4 md:p-0 ">
-        <li>
-          <a href="/cadastra-usuario" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Criar Conta</a>
-        </li>
-        <li>
-          <a href="/login" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Login</a>
-        </li>
-        <li>
-          <a href="/cria-post" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Nova Postagem</a>
-        </li>   
+        <!-- Botões removidos -->
       </ul>
     </div>
   </div>
@@ -41,15 +45,23 @@
 
 <h1 class="p-4 font-semibold whitespace-nowrap">Escreva seu novo post abaixo</h1>
 
-    <form action="/salva-post" method="POST">
+    
+<form action="/salva-post" method="POST">
 
     @csrf
-    
-        <textarea class="ml-20  dark:bg-gray-800 text-white" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
 
-        <button type="submit" class="ml-5 text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">POSTAR</button>
-    </form>
-
+   <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+       <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+           <label for="mensagem" class="sr-only">Your comment</label>
+           <textarea name="mensagem"id="mensagem" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required></textarea>
+       </div>
+       <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
+           <button type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+               Post comment
+           </button>
+       </div>
+   </div>
+</form>
     </div>
 
 
