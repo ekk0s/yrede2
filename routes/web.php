@@ -71,3 +71,10 @@ Route::middleware(['auth'])->group(function () {
         return redirect('/inicial');
     });
 });
+
+Route::post('/logout', function (Request $request) {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');

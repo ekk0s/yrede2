@@ -16,26 +16,29 @@
 </head>
 
 <body class="dark:bg-gray-800 text-white min-h-screen flex items-center justify-center">
-    <div class="container bg-gray-900 bg-opacity-50 p-8 rounded-lg shadow-lg"> <!-- Adicionei a classe bg-opacity-50 para tornar o elemento meio opaco -->
+    <div class="container bg-gray-900 bg-opacity-50 p-8 rounded-lg shadow-lg">
         <div class="flex">
             <div class="w-1/4 p-4">
                 <div class="flex items-center space-x-4">
                     <div class="rounded-full bg-gray-700 w-12 h-12 flex items-center justify-center">
-                        <span class="font-medium text-gray-300">Y</span>
+                    <img src="https://i.pinimg.com/originals/8d/37/20/8d3720db12d126c8f3169e55083d5b45.png" class="rounded-full bg-gray-700 w-12 h-12 flex items-center justify-center"/>
                     </div>
                 </div>
                 <ul class="mt-4">
                     <li>
-                        <a href="/cria-post" class="text-white font-bold hover:text-gray-300">Nova Postagem</a>
+                        <a href="/cria-post" class="w-full p-3 bg-gray-600 text-white rounded block text-center hover:bg-gray-700 transition-colors mt-4 mx-auto">Nova Postagem</a>
                     </li>
                 </ul>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="w-full p-3 bg-red-600 text-white rounded block text-center hover:bg-red-700 transition-colors mt-4 mx-auto">Logout</button>
+                </form>
             </div>
-
             <div class="w-3/4 p-5 text-center text-3xl font-semibold">
                 <h1 class="text-center">SUA TIMELINE</h1>
 
                 @foreach ($posts as $post)
-                    <div class="rounded-xl bg-gray-600 bg-opacity-50 p-4 my-4 shadow-lg"> <!-- Adicionei a classe bg-opacity-50 para tornar o elemento meio opaco -->
+                    <div class="rounded-xl bg-gray-600 bg-opacity-50 p-4 my-4 shadow-lg">
                         <div class="flex items-center space-x-4">
                             <div class="rounded-full bg-gray-700 w-12 h-12 flex items-center justify-center">
                                 <span class="font-medium text-gray-300">Y</span>
